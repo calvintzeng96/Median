@@ -30,14 +30,14 @@ def user(id):
 # Get all Stories by a UserId
 @user_routes.route("/<int:userId>/stories")
 def all_user_stories(userId):
-    stories = Story.query.filter(Story.user_id == int(userId)).all()
+    stories = Story.query.filter(Story.user_id == userId).all()
     return jsonify({"Stories": [story.to_dict() for story in stories]})
 
 
 # Follow a User by id
 @user_routes.route("/<int:userId>/followers")
 def follow_user(userId):
-    following = User.query.get(int(userId))
+    following = User.query.get(userId)
     if not following:
         return NotFoundError("User not found.")
 

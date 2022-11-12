@@ -3,6 +3,7 @@ from flask_login import login_required, current_user
 from app.models import User
 from app.models import Story
 from app.errors import NotFoundError
+from .helpers import get_user_model
 
 user_routes = Blueprint('users', __name__)
 
@@ -38,8 +39,9 @@ def all_user_stories(userId):
 @user_routes.route("/<int:userId>/followers")
 def follow_user(userId):
     following = User.query.get(userId)
+    current = get_user_model(current_user, User)
     if not following:
         return NotFoundError("User not found.")
 
-    current_user.following.append(following)
+    current.following.append(following)
     return {"message": "Successfully Followed", "statusCode": 201}

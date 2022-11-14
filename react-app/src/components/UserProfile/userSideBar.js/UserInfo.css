@@ -1,0 +1,44 @@
+.container-content {
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 20px;
+  font-size: 17px;
+}
+
+.main-header {
+  font-weight: 600;
+  padding: 5px 0px;
+  color: black;
+}
+
+.follow-count > button {
+  background-color: white;
+  border: none;
+  color: darkgray;
+  margin: 0;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+.follow-count > button:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.bio {
+  color: darkgray;
+  margin-bottom: 25px;
+}
+
+.action-btns button {
+  background-color: rgb(26, 137, 23);
+  border-radius: 99em;
+  box-shadow: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 12px;
+  width: 100px;
+}
+.action-btns button:hover {
+  cursor: pointer;
+}

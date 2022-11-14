@@ -36,7 +36,7 @@ const Profile = () => {
           )}
         </div>
         <div className="right-container">
-          <UserInfo user={user} />
+          <UserInfo userId={user.id} />
         </div>
       </div>
     );

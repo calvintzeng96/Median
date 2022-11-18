@@ -49,3 +49,14 @@
 .follow-bio {
   color: darkgray;
 }
+
+#x-container {
+  display: flex;
+  justify-content: right;
+}
+
+#x {
+  text-align: right;
+  width: 20px;
+  color: grey
+}

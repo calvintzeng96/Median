@@ -29,10 +29,6 @@ const EditComment = ({ comment }) => {
       setError("Comment can not be empty")
     }
     dispatch(updateComment(commentId, data))
-      // .then(() => {
-      //   alert("success");
-      // })
-      // .catch(() => alert("fail"));
   };
 
   return (

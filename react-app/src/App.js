@@ -16,10 +16,15 @@ import Team from "./components/Team";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
-  const history = useHistory()
+  const [loaded, setLoaded] = useState(false)
   useEffect(() => {
-    dispatch(authenticate());
+    dispatch(authenticate()).then(() => {
+      setLoaded(true)
+    });
   }, [dispatch]);
+
+  if (!loaded) return null
+
   return (
     <div id={user ? "app-container" : "app-container-logged-out"}>
       <Switch>

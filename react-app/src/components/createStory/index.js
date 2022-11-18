@@ -30,9 +30,6 @@ const CreateStory = () => {
     dispatch(createStory(data)).then(() => {
       history.push(`/users/${user.id}`);
     });
-    //   .catch(() => {
-    //     alert("failed");
-    //   });
   };
 
     return (

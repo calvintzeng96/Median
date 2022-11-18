@@ -26,7 +26,7 @@ const GetAllStories = ({ stories }) => {
       <div className="stories-container">
         {storiesArr &&
           storiesArr.map((story) => {
-            let contentPreview = story.content.slice(0,143) + "..."
+            let contentPreview = story.content.slice(0,120) + "..."
             return (
               <>
                 <div

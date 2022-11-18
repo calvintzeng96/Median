@@ -35,7 +35,6 @@ const NavBar = () => {
     dispatch(logout()).then(() => {
       history.push("/")
     })
-    alert("Successfully Logged Out")
   }
 
   const newStoryRoute = () => {

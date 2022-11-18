@@ -73,10 +73,6 @@ function CreateCommentForm({ story }) {
     dispatch(createComment(storyId, data)).catch((e) =>
       e.json().then((e) => setError([e.errors]))
     );
-    // .then(() => {
-    //   alert("success");
-    // })
-    // .catch(() => alert("fail"));
     setContent("");
   };
 

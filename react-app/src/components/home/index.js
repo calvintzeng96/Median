@@ -11,6 +11,7 @@ import GetAllStories from "../GetAllStories/GetAllStories";
 const Home = () => {
     const dispatch = useDispatch();
     const { setModalType } = useContext(ModalContext)
+    const user = useSelector(state => state.session.user)
     // const user = useSelector(state => state.session.user)
     useEffect(() => {
         dispatch(authenticate())
@@ -21,8 +22,8 @@ const Home = () => {
     const loggedIn = localStorage.getItem("logged")
 
     return (
-        <div id={loggedIn ? "main-container" : "main-container-logged-out"}>
-            {!loggedIn && (
+        <div id={(loggedIn || user) ? "main-container" : "main-container-logged-out"}>
+            {!(loggedIn || user) && (
                 <div>
                     <div id="home-upper-logged-out">
                         <div id="home-upper-left-logged-out">
@@ -47,7 +48,7 @@ const Home = () => {
                 </div>
             )}
 
-            {loggedIn && (
+            {(loggedIn || user) && (
                 <>
                     <div id="container-2">
                         <div id="padding-all-story-container">

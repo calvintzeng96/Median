@@ -49,10 +49,10 @@ const NavBar = () => {
   }
 
   return (
-    <div id={loggedIn ? "container-1" : "container-1-logged-out"}>
-      <div id={loggedIn ? "container-1-inner" : "container-1-inner-logged-out"}>
-        <div id={loggedIn ? "main-icon" : "main-icon-logged-out"}>
-          <div id={loggedIn ? "img" : "img-logged-out"}>
+    <div id={(loggedIn || user) ? "container-1" : "container-1-logged-out"}>
+      <div id={(loggedIn || user) ? "container-1-inner" : "container-1-inner-logged-out"}>
+        <div id={(loggedIn || user) ? "main-icon" : "main-icon-logged-out"}>
+          <div id={(loggedIn || user) ? "img" : "img-logged-out"}>
             <img className="cursor" src={loggedIn ? logo2 : logo} onClick={goHome} width="36px" height="36px" />
           </div>
           {!loggedIn && (<div className="cursor" onClick={goHome} id="median">Median</div>)}

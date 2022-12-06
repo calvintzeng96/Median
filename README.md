@@ -7,13 +7,13 @@ Live site: https://median.onrender.com
 
 ### Please find below links for our project Wiki:
 
-[API Documentation](https://github.com/calvintzeng96/w20-python-project/wiki/API-Routes)
+[API Documentation](https://github.com/calvintzeng96/Median/wiki/API-Routes)
 
-[Database Schema](https://github.com/calvintzeng96/w20-python-project/wiki/Database-Schema)
+[Database Schema](https://github.com/calvintzeng96/Median/wiki/Database-Schema)
 
-[Feature List](https://github.com/calvintzeng96/w20-python-project/wiki/Feature-List)
+[Feature List](https://github.com/calvintzeng96/Median/wiki/Feature-List)
 
-[User Stories](https://github.com/calvintzeng96/w20-python-project/wiki/User-Stories)
+[User Stories](https://github.com/calvintzeng96/Median/wiki/User-Stories)
 
 
 
